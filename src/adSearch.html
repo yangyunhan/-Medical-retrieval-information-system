@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>医学信息检索</title>
+    <link rel="stylesheet" href="less/bootstrap.min.css">
+    <link rel="stylesheet" href="less/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="less/main.css">
+</head>
+<body>
+    <div style="filter: alpha(opacity=20)">
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="pics/IRLablogo.png" href="#maim.jsp"style="padding:0;height:50px;">
+                <a class="navbar-brand" href="main.html">&nbsp&nbsp医学检索系统&nbsp&nbsp</a>
+            </div>
+            <div class="collapse navbar-collapse  navbar-right" id="top-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="main.html">&nbsp&nbsp首页&nbsp&nbsp</a></li>
+                    <li><a href="adSearch.html">&nbsp&nbsp高级检索&nbsp&nbsp</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <button type="button" id="login" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>登陆</button>
+                        <button type="button" id="register" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+        <!-- end of 导航栏 -->
+    </div>
+    <div class="container mainDiv">
+        <div class="main-item-col">
+            <div style="padding-top: 90px" class="">
+                <img class="bodyimg" src="./pics/body.png" ismap="ismap" border="0" usemap="#bodymap" />
+                <map name="bodymap" id="bodymap">
+                    <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部" />
+                    <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱" />
+                </map>
+                <div class="sex">
+                    <button id="male" type="button" class="btn btn-info btn-xs">
+                        男性结构</button>
+                    <button id="female" type="button" class="btn btn-success btn-xs">
+                        女性结构</button>
+                </div>
+            </div>
+            <div class="">
+                <div style="padding: 90px 0px 10px 10px; text-align: left; font-size: 45px; font-family: STLiti;
+                    font-weight: bold;">
+                    Anatomy Human Retrival</div>
+                <div class="notice">
+                    说明：<span style="font-weight: normal; color: #777">设置可以在左侧的人体结构模型上进行点击急速查询，也可以在下方进行更详细的设置</span></div>
+                <div id="father" style="padding: 10px 0px 10px; background-color: #f1f1f1">
+                    <span style="font-weight: bold; padding-left: 10px">输入检索条件：</span>
+                    <div id="base-plus-minus" class="plus-minus" name='plus-minus'>
+                        <div class="inline-items">
+                            <button id="plus" class="btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
+                        <span class="inline-items" style="width: 70px">基础条件</span>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 85px" name="input_0_select" id="input_0_select"
+                                tabindex="1">
+                                <option value="SU" title="SU" selected>主题</option>
+                                <option value="TI" title="TI">篇名</option>
+                                <option value="KY" title="KY">关键词</option>
+                                <option value="AB" title="AB">摘要</option>
+                                <option value="FT" title="FT">全文</option>
+                                <option value="RF" title="RF">参考文献</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_0_val1" name="input_0_val1" tabindex="2">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_0_fre1" id="input_0_fre1"
+                                tabindex="3">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_0_relation1" id="input_0_relation1"
+                                tabindex="4">
+                                <option value="AND" selected>并含</option>
+                                <option value="OR">或含</option>
+                                <option value="NOT">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_0_val2" name="input_0_val2" tabindex="5">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_0_fre2" id="input_0_fre2"
+                                tabindex="6">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_0_acc" id="input_0_acc"
+                                tabindex="7">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="parentpoint">
+                        <div id="plus-minus-1" class="plus-minus" name='plus-minus'>
+                            <div class="inline-items">
+                                <button id="minus-1" class="btn btn-primary btn-xs">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+                            </div>
+                            <div class="inline-items">
+                                <select class="dropdown" style="width: 60px" name="input_1_logical" id="input_1_logical">
+                                    <option value="and" selected>并且</option>
+                                    <option value="or">或者</option>
+                                    <option value="not">不含</option>
+                                </select>
+                            </div>
+                            <div class="inline-items">
+                                <select class="dropdown" style="width: 85px" name="input_1_select" id="input_1_select">
+                                    <option value="SU" title="SU">主题</option>
+                                    <option value="TI" title="TI" selected>篇名</option>
+                                    <option value="KY" title="KY">关键词</option>
+                                    <option value="AB" title="AB">摘要</option>
+                                    <option value="FT" title="FT">全文</option>
+                                    <option value="RF" title="RF">参考文献</option>
+                                </select>
+                            </div>
+                            <div class="inline-items">
+                                <input type="text" id="input_1_val1" name="input_1_val1">
+                            </div>
+                            <div class="inline-items">
+                                <select class="dropdown" style="width: 60px" name="input_1_fre1" id="input_1_fre1">
+                                    <option value="1" selected>词频</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="inline-items">
+                                <select class="dropdown" style="width: 60px" name="input_1_relation1" id="input_1_relation1">
+                                    <option value="AND" selected>并含</option>
+                                    <option value="OR">或含</option>
+                                    <option value="NOT">不含</option>
+                                </select>
+                            </div>
+                            <div class="inline-items">
+                                <input type="text" id="input_1_val2" name="input_1_val2">
+                            </div>
+                            <div class="inline-items">
+                                <select class="dropdown" style="width: 60px" name="input_1_fre2" id="input_1_fre2">
+                                    <option value="1" selected>词频</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="inline-items">
+                                <select class="dropdown" style="width: 60px" name="input_1_acc" id="input_1_acc">
+                                    <option value="%" selected>模糊</option>
+                                    <option value="=">精确</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plus-minus-2" class="plus-minus" name='plus-minus'>
+                        <div class="inline-items">
+                            <button id="minus-2" class="btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_2_logical" id="input_2_logical">
+                                <option value="and" selected>并且</option>
+                                <option value="or">或者</option>
+                                <option value="not">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 85px" name="input_2_select" id="input_2_select">
+                                <option value="SU" title="SU">主题</option>
+                                <option value="TI" title="TI">篇名</option>
+                                <option value="KY" title="KY" selected>关键词</option>
+                                <option value="AB" title="AB">摘要</option>
+                                <option value="FT" title="FT">全文</option>
+                                <option value="RF" title="RF">参考文献</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_2_val1" name="input_2_val1" tabindex="2">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_2_fre1" id="input_2_fre1">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_2_relation1" id="input_2_relation1">
+                                <option value="AND" selected>并含</option>
+                                <option value="OR">或含</option>
+                                <option value="NOT">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_2_val2" name="input_2_val2" tabindex="2">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_2_fre2" id="input_2_fre2">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_2_acc" id="input_2_acc">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="plus-minus-3" class="plus-minus" name='plus-minus'>
+                        <div class="inline-items">
+                            <button id="minus-3" class="btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_3_logical" id="input_3_logical">
+                                <option value="and" selected>并且</option>
+                                <option value="or">或者</option>
+                                <option value="not">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 85px" name="input_3_select" id="input_3_select">
+                                <option value="SU" title="SU">主题</option>
+                                <option value="TI" title="TI">篇名</option>
+                                <option value="KY" title="KY">关键词</option>
+                                <option value="AB" title="AB" selected>摘要</option>
+                                <option value="FT" title="FT">全文</option>
+                                <option value="RF" title="RF">参考文献</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_3_val1" name="input_3_val1">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_3_fre1" id="input_3_fre1">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_3_relation1" id="input_3_relation1">
+                                <option value="AND" selected>并含</option>
+                                <option value="OR">或含</option>
+                                <option value="NOT">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_3_val2" name="input_3_val2">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_3_fre2" id="input_3_fre2">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_3_acc" id="input_3_acc">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="plus-minus-4" class="plus-minus" name='plus-minus'>
+                        <div class="inline-items">
+                            <button id="minus-4" class="btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_4_logical" id="input_4_logical">
+                                <option value="and" selected>并且</option>
+                                <option value="or">或者</option>
+                                <option value="not">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 85px" name="input_4_select" id="input_4_select">
+                                <option value="SU" title="SU">主题</option>
+                                <option value="TI" title="TI">篇名</option>
+                                <option value="KY" title="KY">关键词</option>
+                                <option value="AB" title="AB">摘要</option>
+                                <option value="FT" title="FT" selected>全文</option>
+                                <option value="RF" title="RF">参考文献</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_4_val1" name="input_4_val1">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_4_fre1" id="input_4_fre1">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_4_relation1" id="input_4_relation1">
+                                <option value="AND" selected>并含</option>
+                                <option value="OR">或含</option>
+                                <option value="NOT">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_4_val2" name="input_4_val2" tabindex="2">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_4_fre2" id="input_4_fre2">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_4_acc" id="input_4_acc">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="plus-minus-5" class="plus-minus" name='plus-minus'>
+                        <div class="inline-items">
+                            <button id="minus-5" class="btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_5_logical" id="input_5_logical">
+                                <option value="and" selected>并且</option>
+                                <option value="or">或者</option>
+                                <option value="not">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 85px" name="input_5_select" id="input_5_select">
+                                <option value="SU" title="SU">主题</option>
+                                <option value="TI" title="TI">篇名</option>
+                                <option value="KY" title="KY">关键词</option>
+                                <option value="AB" title="AB">摘要</option>
+                                <option value="FT" title="FT">全文</option>
+                                <option value="RF" title="RF" selected>参考文献</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_5_val1" name="input_5_val1" tabindex="2">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_5_fre1" id="input_5_fre1">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_5_relation1" id="input_5_relation1">
+                                <option value="AND" selected>并含</option>
+                                <option value="OR">或含</option>
+                                <option value="NOT">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_5_val2" name="input_5_val2" tabindex="2">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_5_fre2" id="input_5_fre2">
+                                <option value="1" selected>词频</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_5_acc" id="input_5_acc">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div id="author-plus" class="plus-minus" name='plus-minus-author'>
+                        <div class="inline-items">
+                            <button id="plus-author" class="btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
+                        <span class="inline-items" style="width: 70px">基础条件</span>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 85px" name="input_6_select" id="input_6_select">
+                                <option value="AU" title="AU" selected>作者</option>
+                                <option value="FI" title="FI">第一作者</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_6_val1" name="input_6_val1" placeholder="中文名/英文名/拼音">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_6_acc1" id="input_6_acc1">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <span>作者单位：</span>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_6_val2" name="input_6_val2" placeholder="全称/简称/曾用名">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_6_acc2" id="input_6_acc2">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="author-minus" class="plus-minus" name='plus-minus'>
+                        <div class="inline-items">
+                            <button id="minus-author" class="btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_7_logical" id="input_7_logical">
+                                <option value="and" selected>并且</option>
+                                <option value="or">或者</option>
+                                <option value="not">不含</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 85px" name="input_7_select" id="input_7_select">
+                                <option value="AU" title="AU">作者</option>
+                                <option value="FI" title="FI" selected>第一作者</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_7_val1" name="input_7_val1" placeholder="中文名/英文名/拼音">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_7_acc1" id="input_7_acc1">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                        <div class="inline-items">
+                            <span>作者单位：</span>
+                        </div>
+                        <div class="inline-items">
+                            <input type="text" id="input_7_val2" name="input_7_val2" placeholder="全称/简称/曾用名">
+                        </div>
+                        <div class="inline-items">
+                            <select class="dropdown" style="width: 60px" name="input_7_acc2" id="input_7_acc2">
+                                <option value="%" selected>模糊</option>
+                                <option value="=">精确</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="plus-minus">
+                        <span class="inline-items" style="width: 100px">发表时间：从 </span>
+                        <div class="input-group date inline-items" style="width: 30%" id='startDate' name="datePicker">
+                            <input type="text" class="form-control">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                        <span class="inline-items">到</span>
+                        <div class="input-group date inline-items" style="width: 30%;" id='endDate' name="datePicker">
+                            <input type="text" class="form-control">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                        </span> <span class="inline-items" style="width: 80px">更新时间：</span>
+                        <select class="dropdown" style="width: 100px" name="input_8_time" id="input_8_time">
+                            <option value="all" selected>不限</option>
+                            <option value="week">最近一周</option>
+                            <option value="month">最近一月</option>
+                            <option value="halfyear">最近半年</option>
+                            <option value="year">最近一年</option>
+                            <option value="nearyear">今年迄今</option>
+                            <option value="preyear">上一年度</option>
+                        </select>
+                    </div>
+                    <div class="searchORback">
+                        <div style="padding: 15px">
+                            <button id="adSearch" type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                        <div style="padding: 15px">
+                            <button id="back" type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-refresh"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-sm-6 col-lg-6">
+                    <h4>
+                        武汉大学信息管理学院IR-Lab</h4>
+                    <p>
+                        <span class="glyphicon glyphicon-map-marker"></span>湖北省武汉市武昌区</p>
+                </div>
+                <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+                    <div class="row about">
+                        <div class="col-xs-3">
+                            <h4>
+                                机构简介</h4>
+                            <ul class="list-unstyled">
+                                <li><a style='color: #333' href="#"><span class="glyphicon glyphicon-link"></span>&nbsp关于我们</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-9">
+                            <h4>
+                                联系方式</h4>
+                            <ul class="list-unstyled">
+                                <li><span class="glyphicon glyphicon-envelope">&nbsp电子邮件:xxxxxx@126.com</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row footer-bottom">
+                <ul class="list-inline text-center">
+                    <li>Copyright &copy;2017. 武汉大学信息管理学院信息检索与知识挖掘研究所 All Rights Reserved.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
