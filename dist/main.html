@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>医学信息检索</title>
+    <link rel="stylesheet" href="less/bootstrap.min.css">
+    <link rel="stylesheet" href="less/main.css">
+</head>
+<body>
+<div style="filter:alpha(opacity=20)">
+    
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="pics/IRLablogo.png" href="#maim.jsp" style="padding:0;height:50px;">
+                <a class="navbar-brand" href="main.html">&nbsp&nbsp医学检索系统&nbsp&nbsp</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="top-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="main.html">&nbsp&nbsp首页&nbsp&nbsp</a></li>
+                    <li><a href="adSearch.html">&nbsp&nbsp高级检索&nbsp&nbsp</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <button type="button" id="login" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>登陆</button>
+                        <button type="button" id="register" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+</div>
+<div class="container mainDiv">
+<div class="box">
+    <div style="padding-top: 90px" class="col-md-4">
+            <img class="bodyimg" src="./pics/body.png" ismap="ismap" border="0" usemap="#bodymap">      
+                <map name="bodymap" id="bodymap">
+                    <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部">
+                    <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱">
+                </map>
+    </div>
+    <div class="col-md-8">
+            <div style="padding:90px 0px 30px 10px;text-align:left;font-size: 55px; font-family:STLiti;font-weight:bold;">Anatomy Human Retrival</div>
+            <div style="padding:10px 0px 10px;">
+                <form class="form-inline" role="form">
+                    <div class="form-group col-md-10">
+                        <div class="input-group input-group-md col-md-12">
+                            <input type="text" id="ipSearch" class="form-control" placeholder="请输入想要搜索的信息">
+                            <span class="input-group-btn" style="width:46px">
+                                 <button id="btSearch" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button id="adSearch" type="button" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-refresh">Advanced</span></button>
+                    </div>
+                </form>
+            </div>
+            <div class="hot-search">
+                <div style="font-weight:bold">热门搜索：</div>
+                <a class="hot-search-items" href="#heart">heart</a>
+                <a class="hot-search-items" href="#lung">lung</a>
+                <a class="hot-search-items" href="#head">head</a>
+                <a class="hot-search-items" href="#mouth">mouth</a>
+                <a class="hot-search-items" href="#eye">eye</a>
+            </div>
+    </div>
+</div>
+    
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row footer-top">
+            <div class="col-sm-6 col-lg-6">
+                <h4>武汉大学信息管理学院IR-Lab</h4>
+                <p><span class="glyphicon glyphicon-map-marker"></span>湖北省武汉市武昌区</p>
+            </div>
+            <div class="col-sm-6 col-lg-5 col-lg-offset-1">
+                <div class="row about">
+                    <div class="col-xs-3">
+                        <h4>机构简介</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a style="color:#333" href="#"><span class="glyphicon glyphicon-link"></span>&nbsp关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9">
+                        <h4>联系方式</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <span class="glyphicon glyphicon-envelope">&nbsp电子邮件:xxxxxx@126.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row footer-bottom">
+            <ul class="list-inline text-center">
+                <li>Copyright &copy;2017. 武汉大学信息管理学院信息检索与知识挖掘研究所 All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/common.e073a7.js"></script></body>
+</html>

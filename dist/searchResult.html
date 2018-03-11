@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医学信息检索</title>
+    <link rel="stylesheet" href="less/bootstrap.min.css">
+    <link rel="stylesheet" href="less/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="less/main.css">
+    <link rel="stylesheet" href="less/pageNav.css">
+
+    <link rel="stylesheet" href="less/pager.css">
+    <link rel="stylesheet" href="less/font-awesome.min.css">
+    <link rel="stylesheet" href="less/data-style.css">
+    <link rel="stylesheet" href="less/reset.css">
+</head>
+<body>
+<div style="filter:alpha(opacity=20)">
+    
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="pics/IRLablogo.png" href="#maim.jsp" style="padding:0;height:50px;">
+                <a class="navbar-brand" href="main.html">&nbsp&nbsp医学检索系统&nbsp&nbsp</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="top-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="main.html">&nbsp&nbsp首页&nbsp&nbsp</a></li>
+                    <li><a href="adSearch.html">&nbsp&nbsp高级检索&nbsp&nbsp</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <button type="button" id="login" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>登陆</button>
+                        <button type="button" id="register" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+</div>
+<div class="center-block">
+    <div class="center-left col-sm-3 col-md-3 col-lg-3" style="padding-top: 90px">
+        <img class="bodyimg" src="./pics/body.png" ismap="ismap" border="0" usemap="#bodymap">
+        <map name="bodymap" id="bodymap">
+            <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部">
+            <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱">
+        </map>
+        
+    </div>
+    <div class="center-context col-sm-6 col-md-6 col-lg-6" style="margin-top: 50px">
+        <div>
+            <div style="display: inline-block; padding: 20px 10px">
+                <p>Search results</p>
+                <p>Items: <span>1</span> to 807542</p>
+            </div>
+            <div style="width: 60%;float: right; padding-top: 18px">
+                <ul id="page2" class="nav-pagination pagination">
+
+                </ul>
+            </div>
+        </div>
+
+        <div style="clear: both"></div>
+        <article id="search-results" class="searchResults" style="display: block">
+            <dl id="searchResultsList" class="search-results-list">
+
+            </dl>
+        </article>
+    </div>
+    <div class="center-right col-sm-3 col-md-3 col-lg-3"></div>
+</div>
+
+<script id="paper-template" type="text/x-handlebars-template">
+    {{#each paper}}
+    <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}">
+        <a href="paper1.html">{{paperName}}</a>
+    </dt>
+    <dd>
+        <p class="search-results-authors">{{paperAuthor}}</p>
+        <p>
+            <span>{{paperType}}</span>|
+            <span>published {{paperDate}}</span>|
+            <span>{{paperJournal}}</span>
+        </p>
+        <p><a href="/">{{paperDoi}}</a></p>
+        <div>
+            <p>
+                <a href="/">View: {{paperView}}</a> •
+                <a href="/">Citation: {{paperCitation}}</a> •
+                <a href="/">Download: {{paperDownload}}</a>
+            </p>
+        </div>
+        <p class="TITLE_ABSTRACT" style="display:none">
+            <span>Abstract:</span>
+            {{paperAbstract}}
+        </p>
+        <p class="TITLE_INTRODUCTION" style="display:none">
+            <span>Introduction:</span>
+            {{paperIntroduction}}
+        </p>
+        <p class="TITLE_METHODOLOGY" style="display:none">
+            <span>Methodology:</span>
+            {{paperMethodology}}
+        </p>
+        <p class="TITLE_RESULTS_AND_DISCUSSION" style="display:none">
+            <span>Results and Discussion:</span>
+            {{paperResDis}}
+        </p>
+        <p class="TITLE_CONCLUSION" style="display:none">
+            <span>Conclusion:</span>
+            {{paperConclusion}}
+        </p>
+    </dd>
+    {{/each}}
+</script>
+
+<script type="text/javascript" src="js/common.e073a7.js"></script></body>
+</html>
