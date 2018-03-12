@@ -6,12 +6,8 @@
     <link rel="stylesheet" href="less/bootstrap.min.css">
     <link rel="stylesheet" href="less/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="less/main.css">
-    <link rel="stylesheet" href="less/pageNav.css">
-
-    <link rel="stylesheet" href="less/pager.css">
-    <link rel="stylesheet" href="less/font-awesome.min.css">
     <link rel="stylesheet" href="less/data-style.css">
-    <link rel="stylesheet" href="less/reset.css">
+
 </head>
 <body>
 <div style="filter:alpha(opacity=20)">
@@ -45,8 +41,8 @@
     <!-- end of 导航栏 -->
 </div>
 <div class="center-block">
-    <div class="center-left col-sm-3 col-md-3 col-lg-3" style="padding-top: 90px">
-        <img class="bodyimg" src="./pics/body.png" ismap="ismap" border="0" usemap="#bodymap" />
+    <div class="center-left col-sm-2 col-md-2 col-lg-2" style="padding-top: 110px">
+        <img class="bodyimg" src="./pics/body.png" ismap="ismap" border="0" usemap="#bodymap" style="min-width: 130% !important;display: inline-block;margin-left: -20%"/>
         <map name="bodymap" id="bodymap">
             <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部" />
             <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱" />
@@ -61,13 +57,13 @@
         -->
     </div>
     <div class="center-context col-sm-6 col-md-6 col-lg-6" style="margin-top: 50px">
-        <div>
-            <div style="display: inline-block; padding: 20px 10px">
-                <p>Search results</p>
-                <p>Items: <span>1</span> to <span class="total-number"></span></p>
+        <div style="padding-top: 20px;padding-bottom: 20px">
+            <div style="display: inline-block;">
+                <p style="color: #AF542B;font-weight: bolder;font-size: 1.5em">Search results</p>
+                <p style="color: #AF5428;font-weight: bolder; font-size: smaller">Items: <span>1</span> to 10 from <span class="total-number"></span></p>
             </div>
-            <div style="width: 65%;float: right; padding-top: 18px">
-                <ul id="page2" class="nav-pagination pagination">
+            <div style="width: 45%;float: right;">
+                <ul id="page2" class="pagination"><!--nav-pagination -->
                 </ul>
             </div>
         </div>
@@ -79,12 +75,12 @@
             </dl>
         </article>
     </div>
-    <div class="center-right col-sm-3 col-md-3 col-lg-3" style="margin-top: 50px;">
-        <canvas class="percentage" style="width: 350px;height: 280px; border-bottom: 3px solid #008CFF !important;"></canvas>
-        <canvas class="histogram" style="width: 350px;height: 280px; border-bottom: 3px solid #008CFF !important"></canvas>
-        <canvas class="lineChart" style="width: 350px;height: 280px; border-bottom: 3px solid #008CFF !important"></canvas>
-        <canvas class="pieChart"></canvas>
-        <canvas class="histogram" style="width: 350px;height: 280px; border-bottom: 3px solid #008CFF !important"></canvas>
+    <div class="center-right col-sm-4 col-md-4 col-lg-4" style="margin-top: 50px;">
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="percentage" style="width: 400px;height: 200px;"></canvas></div>
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="lineChart" style="width: 400px;height: 200px;"></canvas></div>
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="pieChart" style="width: 400px;height: 200px"></canvas></div>
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="lineChart" style="width: 400px;height: 200px;"></canvas></div>
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="histogram" style="width: 400px;height: 200px;"></canvas></div>
     </div>
 </div>
 <!--<div class="footer">
@@ -138,13 +134,13 @@
             <span>{{paperJournal}}</span>
         </p>
         <p><a href="/">{{paperDoi}}</a></p>
-        <div>
+        <!--<div>
             <p>
                 <a href="/">View: {{paperView}}</a> •
                 <a href="/">Citation: {{paperCitation}}</a> •
                 <a href="/">Download: {{paperDownload}}</a>
             </p>
-        </div>
+        </div>-->
         <p class="TITLE_ABSTRACT" style="display:none">
             <span>Abstract:</span>
             {{paperAbstract}}
