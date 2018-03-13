@@ -1,98 +1,6 @@
 @import "font-awesome.min.css";
 @import "pager.css";
-#searchControlBarForm{padding: 25px 0 20px;}
-.search-results-controls{
-    border: 2px solid #1e7ae3;
-    border-radius: 5px;
-    background-color: white;
-    padding: 0.8rem 0;
-    margin-bottom: 1.025rem;
-    position: relative;
-    color: #ccc;
-    font-size: 18px;
-    width: 80%;
-}
-.all-site-wrap{background-color: white !important;}
-.search-results-controls-first-row{
-    width: 95%;
-    margin-left: 25px;
-    margin-right: auto;
-    max-width: 85rem;
-}
-.search-field{
-    width: 100%;
-    display: inline;
-    border: 0;
-    margin: 0;
-    padding: 0.3rem;
-    background-color: white;
-}
-.search-field input{width: 90%;}
-.search-results-controls button[type="submit"]{
-    background: white;
-    padding: 0;
-    margin: 0 10px 0 0;
-    border: 0;
-    display: inline;
-    float: right;
-}
-#searchResultsForm{width: 80%;}
-.results-number{
-    float: left;
-    width: 50%;
-    line-height: 100%;
-    padding: 8px 0 8px 15px;
-}
-.results-display{
-    float: left;
-    width: 50%;
-    align-items: center;
-}
-.results-display span{
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.search-results-select{
-    display: inline-block;
-    float: none;
-    vertical-align: middle;
-    width: 70%;
-}
-.search-results-select label{
-    width:100%;
-    background-color: #f8af2d;
-    color: #333;
-    position: relative;
-    display: table !important;
-    overflow: hidden;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-.down{
-    display: inline-block;
-    position: absolute;
-    top: 25%;
-    right: 5%;
-}
-#display-order{
-    -moz-appearance: none;
-    -webkit-appearance: none;
-}
-.search-results-select select{
-    width: 100%;
-    background: transparent;
-    color: #333;
-    border-color: transparent;
-    padding: 0.4375rem 1.25rem 0.4375rem 1.25rem;
-    margin-right: 0;
-}
+
 .clear{clear: both;}
 #search-loading{
     position: relative;
@@ -102,7 +10,7 @@
 }
 .searchResults{
     margin-top: 20px;
-    padding-left: 16px;
+    /*padding-left: 16px;*/
 }
 dl{
     font-size: 16px;
@@ -126,78 +34,4 @@ dt a{color: #333;}
 #searchResultsList p{
     font-size: 1.25rem;
     margin-bottom: 2px;
-}
-.switch.previous-page{
-    margin: 0 12rem 0 0;
-    padding: 0;
-}
-.switch.disabled{
-    background-color: #ccc;
-    cursor: default;
-}
-.previous-page{
-    line-height: 24px;
-    width: 24px;
-}
-.switch{
-    background: #333;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 14px;
-    min-width: 2rem;
-    border-radius: 5px;
-    text-align: center;
-}
-.nav-pagination span i,.nav-pagination a i{color: white;}
-.switch .icon-text{
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-.nav-pagination .active{background-color: #f8af2d;}
-.nav-pagination a{
-    box-sizing: content-box;
-    padding: 0.125rem 0.725rem;
-    color: #333;
-}
-.seq{
-    background-color: #ccc;
-    vertical-align: bottom;
-    text-align: center;
-}
-.number{
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    min-width: 1rem;
-    border-radius: 5px;
-    text-align: center;
-    margin: 0 0.625rem;
-}
-.skip{
-    display: inline-block;
-    width: 24px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.75rem;
-    padding: 0 .375rem;
-    min-width: 1rem;
-    border-radius: 5px;
-    background-color: #ccc;
-    text-align: center;
-    margin: 0 .0625rem;
-}
-.switch.next-page{
-    margin: 0 0 0 12rem;
-    padding: 0;
-}
-.next-page{
-    line-height: 24px;
-    width: 24px;
-}
-#results-num{
-    display: inline-block;
-}
-#searchTerm{
-    display: inline-block;
 }

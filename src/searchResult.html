@@ -40,7 +40,7 @@
     </nav>
     <!-- end of 导航栏 -->
 </div>
-<div class="center-block">
+<div class="center-block" style="overflow: hidden">
     <div class="center-left col-sm-2 col-md-2 col-lg-2" style="padding-top: 110px">
         <img class="bodyimg" src="./pics/body.png" ismap="ismap" border="0" usemap="#bodymap" style="min-width: 130% !important;display: inline-block;margin-left: -20%"/>
         <map name="bodymap" id="bodymap">
@@ -56,7 +56,7 @@
         </div>
         -->
     </div>
-    <div class="center-context col-sm-6 col-md-6 col-lg-6" style="margin-top: 50px">
+    <div class="center-context col-sm-6 col-md-6 col-lg-6" style="margin-top: 80px">
         <div style="padding-top: 20px;padding-bottom: 20px">
             <div style="display: inline-block;">
                 <p style="color: #AF542B;font-weight: bolder;font-size: 1.5em">Search results</p>
@@ -83,7 +83,7 @@
         <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="histogram" style="width: 400px;height: 200px;"></canvas></div>
     </div>
 </div>
-<!--<div class="footer">
+<div class="footer">
     <div class="container">
         <div class="row footer-top">
             <div class="col-sm-6 col-lg-6">
@@ -120,7 +120,7 @@
             </ul>
         </div>
     </div>
-</div>-->
+</div>
 <script id="paper-template" type="text/x-handlebars-template">
     {{#each paper}}
     <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}">

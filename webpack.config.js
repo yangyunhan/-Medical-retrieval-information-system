@@ -87,14 +87,6 @@ let config = {
         }),
 		new ExtractTextPlugin("css/[name]-style.css"),
         new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en|de|cz|eu)$/)
-        /*new webpack.optimize.CommonsChunkPlugin({
-            name: 'common', // 将公共模块提取,生成名为`vendors`的chunk
-            minChunks: 3 // 提取至少3个模块共有的部分
-        }),
-        new webpack.optimize.UglifyJsPlugin(),
-        new CopyWebpackPlugin([
-            {from: './src/pics', to: './images'} //拷贝图片
-        ])*/
     ],
     externals: {
         $: 'jQuery'
