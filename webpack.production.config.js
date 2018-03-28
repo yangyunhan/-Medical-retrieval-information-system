@@ -9,11 +9,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin'); // 文件拷贝
 
 let config = {
     entry: {
-        index: __dirname + "/src/js/index.js",
-        adSearch: __dirname + "/src/js/adSearch.js"
+        main: __dirname + "/src/js/main.js",
+        adSearch: __dirname + "/src/js/adSearch.js",
+        searchResult: __dirname + "/src/js/searchResult.js"
     },
     output: {
-        path: __dirname + "/dist", //打包后的文件存放的地方
+        path: path.join(__dirname, "/dist"), //打包后的文件存放的地方
         filename: "js/[name].[hash:6].js",//打包后输出文件的文件名
         chunkFilename: 'js/[id].chunk.js'//chunk生成的配置
     },
@@ -78,7 +79,7 @@ let config = {
         new ExtractTextPlugin("css/[name]-style.css"),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common', // 将公共模块提取,生成名为`vendors`的chunk
-            minChunks: 3 // 提取至少3个模块共有的部分
+            minChunks: 1 // 提取至少3个模块共有的部分
         }),
         new webpack.optimize.UglifyJsPlugin(),
         new CopyWebpackPlugin([
@@ -88,12 +89,16 @@ let config = {
     externals: {
         $: 'jQuery'
     },
+    node:{
+        fs: 'empty'
+    }
 };
 module.exports = config;
 let pages = Object.keys(getEntry('./src/*.html'));
 let confTitle = [
-    {name: 'index', title: '这是首页'},
+    {name: 'main', title: '这是首页'},
     {name: 'adSearch', title: '这是检索页'},
+    {name: 'searchResult', title: '这是检索结果页'}
 ];
 //生成HTML模板
 pages.forEach(function(pathname) {
