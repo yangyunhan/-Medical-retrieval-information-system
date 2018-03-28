@@ -7,17 +7,16 @@ const glob = require('glob');
 let config = {
     entry: {
         main: __dirname + "/src/js/main.js",
-        /*index: __dirname + "/src/js/index.js",*/
         adSearch: __dirname + "/src/js/adSearch.js",
         searchResult: __dirname + "/src/js/searchResult.js"
     },
     output: {
-        path: path.join(__dirname, '/dist'), //打包后的文件存放的地方/__dirname, 'dist'
+        path: path.join(__dirname, '/dist'), //打包后的文件存放的地方
         filename: "js/[name].[hash:6].js",//打包后输出文件的文件名
         chunkFilename: 'js/[id].chunk.js'//chunk生成的配置
     },
     devServer: {
-        contentBase: __dirname +"/src",
+        contentBase: __dirname + "/src",
         host: 'localhost',
         port: 8188,
         inline: true,//实时刷新
@@ -91,7 +90,7 @@ let config = {
             minChunks: 1
         }),
 		new ExtractTextPlugin("css/[name]-style.css"),
-        new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en|de|cz|eu)$/)
+        /*new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en|de|cz|eu)$/)*/
     ],
     externals: {
         $: 'jQuery'
