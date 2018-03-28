@@ -83,7 +83,7 @@ let config = {
         }),
         new webpack.optimize.UglifyJsPlugin(),
         new CopyWebpackPlugin([
-            {from: './src/pics', to: './images'} //拷贝图片
+            {from: './src/images', to: './images'} //拷贝图片
         ])
     ],
     externals: {
