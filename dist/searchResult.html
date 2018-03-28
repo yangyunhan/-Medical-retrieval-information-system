@@ -3,16 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>医学信息检索</title>
-    <link rel="stylesheet" href="less/bootstrap.min.css">
-    <link rel="stylesheet" href="less/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="less/main.css">
-    <link rel="stylesheet" href="less/pageNav.css">
-
-    <link rel="stylesheet" href="less/pager.css">
-    <link rel="stylesheet" href="less/font-awesome.min.css">
-    <link rel="stylesheet" href="less/data-style.css">
-    <link rel="stylesheet" href="less/reset.css">
-</head>
+<link href="css/common-style.css" rel="stylesheet"></head>
 <body>
 <div style="filter:alpha(opacity=20)">
     
@@ -25,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand" src="pics/IRLablogo.png" href="#maim.jsp" style="padding:0;height:50px;">
+                <img class="navbar-brand" src="images/IRLablogo.png" href="#maim.jsp" style="padding:0;height:50px;">
                 <a class="navbar-brand" href="main.html">&nbsp&nbsp医学检索系统&nbsp&nbsp</a>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="top-navbar-collapse">
@@ -44,24 +35,23 @@
     </nav>
     
 </div>
-<div class="center-block">
-    <div class="center-left col-sm-3 col-md-3 col-lg-3" style="padding-top: 90px">
-        <img class="bodyimg" src="./pics/body.png" ismap="ismap" border="0" usemap="#bodymap">
+<div class="center-block" style="overflow: hidden">
+    <div class="center-left col-sm-2 col-md-2 col-lg-2" style="padding-top: 110px">
+        <img class="bodyimg" src="images/body.png" ismap="ismap" border="0" usemap="#bodymap" style="min-width: 130% !important;display: inline-block;margin-left: -20%">
         <map name="bodymap" id="bodymap">
             <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部">
             <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱">
         </map>
         
     </div>
-    <div class="center-context col-sm-6 col-md-6 col-lg-6" style="margin-top: 50px">
-        <div>
-            <div style="display: inline-block; padding: 20px 10px">
-                <p>Search results</p>
-                <p>Items: <span>1</span> to 807542</p>
+    <div class="center-context col-sm-6 col-md-6 col-lg-6" style="margin-top: 80px">
+        <div style="padding-top: 20px;padding-bottom: 20px">
+            <div style="display: inline-block;">
+                <p style="color: #AF542B;font-weight: bolder;font-size: 1.5em">Search results</p>
+                <p style="color: #AF5428;font-weight: bolder; font-size: smaller">Items: <span>1</span> to 10 from <span class="total-number"></span></p>
             </div>
-            <div style="width: 60%;float: right; padding-top: 18px">
-                <ul id="page2" class="nav-pagination pagination">
-
+            <div style="width: 45%;float: right;">
+                <ul id="page2" class="pagination">
                 </ul>
             </div>
         </div>
@@ -73,9 +63,51 @@
             </dl>
         </article>
     </div>
-    <div class="center-right col-sm-3 col-md-3 col-lg-3"></div>
+    <div class="center-right col-sm-4 col-md-4 col-lg-4" style="margin-top: 50px;">
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="percentage" style="width: 400px;height: 200px;"></canvas></div>
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="lineChart" style="width: 400px;height: 200px;"></canvas></div>
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="pieChart" style="width: 400px;height: 200px"></canvas></div>
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="lineChart" style="width: 400px;height: 200px;"></canvas></div>
+        <div class="charts" style="border-bottom: 5px solid #008CFF;margin: 0 30px 0 40px;padding: 10px 0"><canvas class="histogram" style="width: 400px;height: 200px;"></canvas></div>
+    </div>
 </div>
+<div class="footer">
+    <div class="container">
+        <div class="row footer-top">
+            <div class="col-sm-6 col-lg-6">
+                <h4>武汉大学信息管理学院IR-Lab</h4>
+                <p><span class="glyphicon glyphicon-map-marker"></span>湖北省武汉市武昌区</p>
+            </div>
+            <div class="col-sm-6 col-lg-5 col-lg-offset-1">
+                <div class="row about">
+                    <div class="col-xs-3">
+                        <h4>机构简介</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a style="color:#333" href="#"><span class="glyphicon glyphicon-link"></span>&nbsp关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9">
+                        <h4>联系方式</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <span class="glyphicon glyphicon-envelope">&nbsp电子邮件:xxxxxx@126.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+        <hr>
+        <div class="row footer-bottom">
+            <ul class="list-inline text-center">
+                <li>Copyright &copy;2017. 武汉大学信息管理学院信息检索与知识挖掘研究所 All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+</div>
 <script id="paper-template" type="text/x-handlebars-template">
     {{#each paper}}
     <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}">
@@ -89,13 +121,13 @@
             <span>{{paperJournal}}</span>
         </p>
         <p><a href="/">{{paperDoi}}</a></p>
-        <div>
+        <!--<div>
             <p>
                 <a href="/">View: {{paperView}}</a> •
                 <a href="/">Citation: {{paperCitation}}</a> •
                 <a href="/">Download: {{paperDownload}}</a>
             </p>
-        </div>
+        </div>-->
         <p class="TITLE_ABSTRACT" style="display:none">
             <span>Abstract:</span>
             {{paperAbstract}}
@@ -119,6 +151,8 @@
     </dd>
     {{/each}}
 </script>
-
-<script type="text/javascript" src="js/common.e073a7.js"></script></body>
+<script id="paper-number" type="text/x-handlebars-template">
+    {{length}}
+</script>
+<script type="text/javascript" src="js/common.5888f6.js"></script><script type="text/javascript" src="js/searchResult.5888f6.js"></script></body>
 </html>
