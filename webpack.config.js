@@ -6,12 +6,13 @@ const glob = require('glob');
 
 let config = {
     entry: {
-        index: __dirname + "/src/js/index.js",
+        main: __dirname + "/src/js/main.js",
+        /*index: __dirname + "/src/js/index.js",*/
         adSearch: __dirname + "/src/js/adSearch.js",
         searchResult: __dirname + "/src/js/searchResult.js"
     },
     output: {
-        path: __dirname + "/dist", //打包后的文件存放的地方
+        path: path.join(__dirname, '/dist'), //打包后的文件存放的地方/__dirname, 'dist'
         filename: "js/[name].[hash:6].js",//打包后输出文件的文件名
         chunkFilename: 'js/[id].chunk.js'//chunk生成的配置
     },
@@ -85,6 +86,10 @@ let config = {
             datetimepicker: 'bootstrap-datetimepicker',
             table: 'bootstrap-table'
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            minChunks: 1
+        }),
 		new ExtractTextPlugin("css/[name]-style.css"),
         new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en|de|cz|eu)$/)
     ],
@@ -98,7 +103,7 @@ let config = {
 module.exports = config;
 let pages = Object.keys(getEntry('./src/*.html'));
 let confTitle = [
-    {name: 'index', title: '这是首页'},
+    {name: 'main', title: '这是首页'},
     {name: 'adSearch', title: '这是检索页'},
     {name: 'searchResult', title: '这是检索结果页'}
 ];
