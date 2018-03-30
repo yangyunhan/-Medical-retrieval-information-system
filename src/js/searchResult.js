@@ -7,4 +7,3 @@ require('./page');
 require('./charts');
 require('./results');
 require('./template');
-

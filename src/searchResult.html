@@ -117,18 +117,18 @@
     </div>
 </div>
 <script id="paper-template" type="text/x-handlebars-template">
-    {{#each paper}}
+    {{#each result}}
     <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}">
-        <a href="paper1.html">{{paperName}}</a>
+        <a href="paper1.html">{{title}}</a>
     </dt>
     <dd>
-        <p class="search-results-authors">{{paperAuthor}}</p>
+        <p class="search-results-authors">{{firstauthor}},{{otherauthors}}</p>
         <p>
-            <span>{{paperType}}</span>|
-            <span>published {{paperDate}}</span>|
-            <span>{{paperJournal}}</span>
+            <span>{{journalname}}</span>.
+            <span>{{pubyear}}</span>
+            <span>{{pubmonth}}</span>.
         </p>
-        <p><a href="/">{{paperDoi}}</a></p>
+        <p><a href="/">PMID:{{pmid}}</a></p>
         <!--<div>
             <p>
                 <a href="/">View: {{paperView}}</a> •
@@ -138,9 +138,9 @@
         </div>-->
         <p class="TITLE_ABSTRACT" style="display:none">
             <span>Abstract:</span>
-            {{paperAbstract}}
+            {{abstract}}
         </p>
-        <p class="TITLE_INTRODUCTION" style="display:none">
+        <!--<p class="TITLE_INTRODUCTION" style="display:none">
             <span>Introduction:</span>
             {{paperIntroduction}}
         </p>
@@ -155,7 +155,7 @@
         <p class="TITLE_CONCLUSION" style="display:none">
             <span>Conclusion:</span>
             {{paperConclusion}}
-        </p>
+        </p>-->
     </dd>
     {{/each}}
 </script>

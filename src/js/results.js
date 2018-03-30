@@ -11,8 +11,10 @@ function GetQueryString() {
         }
         data[keyValue[0]] = keyValue[1];
     });
+
     //console.log(data);
 }
+
 
 GetQueryString();
 

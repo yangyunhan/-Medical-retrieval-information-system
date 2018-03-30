@@ -16,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand" src="images/IRLablogo.png" href="#maim.jsp"style="padding:0;height:50px;"><!--如果是在开发阶段，img路径改成./pics/IRLablogo.png-->
+                <img class="navbar-brand" src="images/IRLablogo.png" href="#main.html"style="padding:0;height:50px;">
                 <a class="navbar-brand" href="main.html">&nbsp&nbsp医学检索系统&nbsp&nbsp</a>
             </div>
             <div class="collapse navbar-collapse  navbar-right" id="top-navbar-collapse">
@@ -38,11 +38,20 @@
 <div class="container mainDiv" >
 <div class="box">
     <div style="padding-top: 90px" class="col-md-4">
-            <img class="bodyimg" src="images/body.png" ismap="ismap" border="0" usemap="#bodymap" /><!--./pics/body.png-->
-                <map name="bodymap" id="bodymap">
-                    <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部"/>
-                    <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱"/>
-                </map>
+        <div id="testDiv" style="height:300px;width:170px">
+            <img id="body" class="bodyimg" src="images/全身.png" border="0"/>
+            <img id="brain" style="display:none;" class="bodyimg" src="images/大脑.png" border="0"/>
+            <img id="digest" style="display:none;" class="bodyimg" src="images/消化道.png" border="0"/>
+            <img id="lung" style="display:none;" class="bodyimg" src="images/肺部.png" border="0"/>
+            <img id="heart" style="display:none;" class="bodyimg" src="images/心脏.png" border="0"/>
+            <img id="liver" style="display:none;" class="bodyimg" src="images/肝脏.png" border="0"/>
+            <img id="stomach" style="display:none;" class="bodyimg" src="images/胃.png" border="0"/>
+            <img id="gallbladder" style="display:none;" class="bodyimg" src="images/胆囊.png" border="0"/>
+            <img id="pancreas" style="display:none;" class="bodyimg" src="images/胰腺.png" border="0"/>
+            <img id="large_intestine" style="display:none;" class="bodyimg" src="images/大肠.png" border="0"/>
+            <img id="small_intestine" style="display:none;" class="bodyimg" src="images/小肠.png" border="0"/>
+            <img id="urinary" style="display:none;" class="bodyimg" src="images/泌尿.png" border="0"/>
+        </div>
     </div>
     <div class="col-md-8">
             <div style="padding:90px 0px 30px 10px;text-align:left;font-size: 55px; font-family:STLiti;font-weight:bold;">Anatomy Human Retrival</div>

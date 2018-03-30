@@ -85,10 +85,10 @@ let config = {
             datetimepicker: 'bootstrap-datetimepicker',
             table: 'bootstrap-table'
         }),
-        new webpack.optimize.CommonsChunkPlugin({
+        /*new webpack.optimize.CommonsChunkPlugin({
             name: 'common',
             minChunks: 1
-        }),
+        }),*/
 		new ExtractTextPlugin("css/[name]-style.css"),
         /*new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en|de|cz|eu)$/)*/
     ],
@@ -119,7 +119,7 @@ pages.forEach(function(pathname) {
             collapseWhitespace: false //删除空白符与换行符
         }
     };
-    conf.chunks = ['common', itemName[1]];
+    //conf.chunks = ['common', itemName[1]];
     for (let i in confTitle) {
         if (confTitle[i].name === itemName[1]) {
             conf.title = confTitle[i].title

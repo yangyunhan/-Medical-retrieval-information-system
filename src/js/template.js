@@ -13,12 +13,12 @@ module.exports = (function () {
         let myTemplate = Handlebars.compile($(scriptId).html());
         $(elementClass).html(myTemplate(paper));
     }
-    let pageLength  = Math.ceil(results.length/10);
+    let pageLength = Math.ceil(results.length/10);
     let lastLength = results.length % 10;
     let papers = [];
     let pId = 0;
-    for(let i=0;i<pageLength;i++){
-        if(i===pageLength-1){
+    for(let i = 0; i < pageLength; i++){
+        if(i === pageLength-1){
             papers[i] = {
                 length: lastLength,
                 paper: []
@@ -33,7 +33,7 @@ module.exports = (function () {
         if(papers[pId].paper.length<10){
             papers[pId].paper.push(item);
         }else {
-            pId ++;
+            pId++;
             papers[pId].paper.push(item);
         }
     });

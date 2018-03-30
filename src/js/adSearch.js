@@ -3,5 +3,4 @@ import '../less/bootstrap-datetimepicker.min.css'
 import '../less/main.css'
 
 require('./moment-with-locales');
-require('./main');
 require('./condition');

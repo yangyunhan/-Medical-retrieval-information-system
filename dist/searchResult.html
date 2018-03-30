@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>医学信息检索</title>
-<link href="css/common-style.css" rel="stylesheet"></head>
+<link href="css/searchResult-style.css" rel="stylesheet"><link href="css/adSearch-style.css" rel="stylesheet"><link href="css/main-style.css" rel="stylesheet"></head>
 <body>
 <div style="filter:alpha(opacity=20)">
     
@@ -109,18 +109,18 @@
     </div>
 </div>
 <script id="paper-template" type="text/x-handlebars-template">
-    {{#each paper}}
+    {{#each result}}
     <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}">
-        <a href="paper1.html">{{paperName}}</a>
+        <a href="paper1.html">{{title}}</a>
     </dt>
     <dd>
-        <p class="search-results-authors">{{paperAuthor}}</p>
+        <p class="search-results-authors">{{firstauthor}},{{otherauthors}}</p>
         <p>
-            <span>{{paperType}}</span>|
-            <span>published {{paperDate}}</span>|
-            <span>{{paperJournal}}</span>
+            <span>{{journalname}}</span>.
+            <span>{{pubyear}}</span>
+            <span>{{pubmonth}}</span>.
         </p>
-        <p><a href="/">{{paperDoi}}</a></p>
+        <p><a href="/">PMID:{{pmid}}</a></p>
         <!--<div>
             <p>
                 <a href="/">View: {{paperView}}</a> •
@@ -130,9 +130,9 @@
         </div>-->
         <p class="TITLE_ABSTRACT" style="display:none">
             <span>Abstract:</span>
-            {{paperAbstract}}
+            {{abstract}}
         </p>
-        <p class="TITLE_INTRODUCTION" style="display:none">
+        <!--<p class="TITLE_INTRODUCTION" style="display:none">
             <span>Introduction:</span>
             {{paperIntroduction}}
         </p>
@@ -147,12 +147,12 @@
         <p class="TITLE_CONCLUSION" style="display:none">
             <span>Conclusion:</span>
             {{paperConclusion}}
-        </p>
+        </p>-->
     </dd>
     {{/each}}
 </script>
 <script id="paper-number" type="text/x-handlebars-template">
     {{length}}
 </script>
-<script type="text/javascript" src="js/common.5888f6.js"></script><script type="text/javascript" src="js/searchResult.5888f6.js"></script></body>
+<script type="text/javascript" src="js/searchResult.26a055.js"></script><script type="text/javascript" src="js/adSearch.26a055.js"></script><script type="text/javascript" src="js/main.26a055.js"></script></body>
 </html>

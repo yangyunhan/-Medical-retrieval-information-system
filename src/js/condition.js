@@ -15,7 +15,6 @@ $("#plus-author").click(function () {
 $("#minus-author").click(function () {
         $("#author-minus").hide();
     });
-
 $("#minus-1").click(function () {
         $("#plus-minus-1").hide();
         add_count--;
@@ -85,11 +84,9 @@ $('#back').click(function(){
         window.location.href = 'main.html'
     });
 
-$('#adSearch').click(function(){
-    createQuery();
+$('.search').click(function () {
+    createQuery()
 });
-
-
 
 function createQuery(){
     var baseQuery = {
