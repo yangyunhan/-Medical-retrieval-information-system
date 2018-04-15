@@ -1,0 +1,87 @@
+@import "font-awesome.min.css";
+.all-site-wrap>.tab{
+    position: relative;
+}
+.all-site-wrap{background-color: white !important;}
+.title-content{
+    height: 140px;
+}
+h1{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.all-site-wrap{
+    background-color: white;
+}
+ul{
+    margin-bottom: 10px;
+}
+.author-list li,.doi-list li{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.paper-wrapper{
+    position: relative;
+    width: 100%;
+}
+.paper{
+    position: relative;
+    /*padding-right: 200px;*/
+}
+.function-container{
+    position: relative;
+    margin-left: 10px;
+}
+.function-container p{
+    text-align: justify;
+}
+h2{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.all-site-wrap p{
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+ul.function-list{
+    position: fixed;
+    right: 75px;
+    top: 280px;
+}
+.function-list li{
+    margin: 0 0 5px 0;
+}
+.function-active{
+    font-weight: 600;
+    border-left: 2px solid #2a6496;
+    color: #428bca;
+}
+.function-item{
+    padding-left: 10px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.tab>.row{
+    position: absolute;
+    background-color: white;
+    /*border-bottom: 5px solid #3c3c3c;
+    background-color: #3c3c3c;*/
+}
+.title-content h1,.title-content li{
+    color: #3c3c3c;
+}
+li.function-item{
+    font-size: 16px;
+}
+li.function-item:hover{
+    border-left: 1px solid #2a6496;
+}
+.row{
+    padding-left: 10px;
+}
+.artTitle{
+    color: #428bca !important;
+}

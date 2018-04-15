@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>医学信息检索</title>
-<link href="css/searchResult-style.css" rel="stylesheet"><link href="css/adSearch-style.css" rel="stylesheet"><link href="css/main-style.css" rel="stylesheet"></head>
+<link href="css/searchResult-style.css" rel="stylesheet"><link href="css/adSearch-style.css" rel="stylesheet"><link href="css/singlePaper-style.css" rel="stylesheet"><link href="css/main-style.css" rel="stylesheet"><link href="css/login-style.css" rel="stylesheet"></head>
 <body>
 <div style="filter:alpha(opacity=20)">
     
@@ -42,7 +42,6 @@
             <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部">
             <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱">
         </map>
-        
     </div>
     <div class="center-context col-sm-6 col-md-6 col-lg-6" style="margin-top: 80px">
         <div style="padding-top: 20px;padding-bottom: 20px">
@@ -109,11 +108,12 @@
     </div>
 </div>
 <script id="paper-template" type="text/x-handlebars-template">
-    {{#each result}}
-    <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}">
+    {{#each paper}}
+    <input type="checkbox" style="display: inline-block">
+    <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}" style="width: 95%">
         <a href="paper1.html">{{title}}</a>
     </dt>
-    <dd>
+    <dd style="margin-left: 15px">
         <p class="search-results-authors">{{firstauthor}},{{otherauthors}}</p>
         <p>
             <span>{{journalname}}</span>.
@@ -154,5 +154,5 @@
 <script id="paper-number" type="text/x-handlebars-template">
     {{length}}
 </script>
-<script type="text/javascript" src="js/searchResult.af141b.js"></script><script type="text/javascript" src="js/adSearch.af141b.js"></script><script type="text/javascript" src="js/main.af141b.js"></script></body>
+<script type="text/javascript" src="js/searchResult.cf87a1.js"></script><script type="text/javascript" src="js/adSearch.cf87a1.js"></script><script type="text/javascript" src="js/singlePaper.cf87a1.js"></script><script type="text/javascript" src="js/main.cf87a1.js"></script><script type="text/javascript" src="js/login.cf87a1.js"></script></body>
 </html>

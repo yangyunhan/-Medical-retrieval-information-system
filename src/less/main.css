@@ -3,6 +3,9 @@ html, body {
     height: 100%;
     min-height: 100%;
 }
+.hot-search a{
+    color: #337ab7;
+}
 body {
     background: #ffffff;
     font-family: "Microsoft YaHei",Helvetica Neue, Helvetica, Arial, sans-serif,"宋体";
@@ -12,13 +15,14 @@ body {
     padding: 0;
 }
 .navbar{
-    padding: 12px 0;
+    padding: 15px 0;
+    font-size: 20px;
 }
 .container-fluid{
-    margin: 0 15px !important;
+    margin: 0 30px !important;
 }
 .navbar-brand{
-    font-size: 25px !important;
+    font-size: 30px !important;
 }
 .bg-white{
     background-color: #f8f9fa!important;
@@ -71,7 +75,7 @@ body {
     justify-content:space-around;
 }
 .mainDiv{
-    min-height:100%;
+    /*min-height:100%;*/
     height:auto!important;
     height:1020px;
     position:relative;
@@ -183,4 +187,170 @@ ul.nav-tabs.affix{
     justify-content:flex-end;
     align-items: center;
     padding-right:20px;
+}
+
+.globalDimension1{
+    background-image: url('../images/人体数据图.png');
+    width: 80%;
+    height: 580px;
+    background-position: 0 -1898px;
+    background-size: 555%;
+    margin: 0 auto
+}
+
+.line{
+    width: 80%;
+    border: 3px solid black;
+    margin: 0 auto;
+}
+.globalDimension2{
+    overflow: hidden;
+    position: relative;
+}
+.globalDimension2-1{
+    display: inline-block;
+    background-image: url('../images/系统waffle图.png');
+    width: 60%;
+    height: 326px;
+    background-size: 93%;
+    background-position: 17px 15px;
+
+}
+.globalDimension2-2{
+    position: absolute;
+    background-image: url("../images/系统waffle图.png");
+    width: 60%;
+    height: 326px;
+    background-size: 93%;
+    right: -295px;
+    top: 14px;
+    background-position: 0 -320px;
+}
+.apparatusDimension{
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.apparatusDimension img{
+    width: 40%;
+    margin: 0 auto;
+}
+.absoluteFre{
+    width: 50%;
+    height: 450px;
+    background-image: url("../images/心脏绝对频率折线图.png");
+    background-position: 0 -80px;
+    background-size: 103%;
+}
+.relativeFre{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 450px;
+    background-image: url("../images/心脏相对频率折线图.png");
+    background-position: 0 -80px;
+    background-size: 103%;
+}
+.jgPic{
+    display: inline-block;
+    width: 22%;
+    height: 310px;
+
+    background-image: url("../images/肌骨系统.png");
+    background-size: 105%;
+    background-position: 30px 0;
+}
+.hxPic{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 80px;
+    width: 20%;
+    height: 290px;
+
+    background-image: url("../images/呼吸系统.png");
+    background-size: 110%;
+}
+.xhPic{
+    display: inline-block;
+    width: 24%;
+    height: 290px;
+    background-position: -14px 0;
+
+    background-image: url("../images/消化系统.png");
+    background-size: 121%;
+}
+.xxgPic{
+    position: absolute;
+    top: 0;
+    right: 80px;
+    display: inline-block;
+    width: 24%;
+    height: 310px;
+
+    background-image: url("../images/心血管系统.png");
+    background-position: 0 -90px;
+    background-size: 121%;
+}
+
+.female1{
+    background-image: url("../images/女子六大系统 .png");
+    width: 120px;
+    height: 265px;
+    background-size: 430%;
+    background-position: -210px -290px;
+}
+.female2{
+    background-image: url("../images/女子六大系统 .png");
+    width: 120px;
+    height: 290px;
+    background-size: 430%;
+    background-position: -396px 0;
+    position: absolute;
+    top: 10px;
+    left: 85px;
+}
+.female3{
+    background-image: url("../images/女子六大系统 .png");
+    width: 120px;
+    height: 268px;
+    background-size: 430%;
+    background-position: 0 -290px;
+    position: absolute;
+    top: -10px;
+    right: 50px;
+}
+.female4{
+    background-image: url("../images/女子六大系统 .png");
+    width: 120px;
+    height: 290px;
+    background-size: 430%;
+    position: absolute;
+    left: 50px;
+    top: 400px;
+}
+.female5{
+    background-image: url("../images/女子六大系统 .png");
+    width: 120px;
+    height: 290px;
+    background-size: 430%;
+    background-position: -210px 0;
+    position: absolute;
+    right: 50px;
+    top: 400px;
+}
+.radarPic{
+    background-image: url("../images/雷达图.png");
+    background-size: 100%;
+    width: 500px;
+    height: 420px;
+    position: absolute;
+    top: 110px;
+    left: 220px;
+}
+
+.inline-items input{
+    width: 350px;
 }

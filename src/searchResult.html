@@ -42,14 +42,6 @@
             <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部" />
             <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱" />
         </map>
-        <!--
-        <div class="sex">
-            <button id="male" type="button" class="btn btn-info btn-xs">
-                男性结构</button>
-            <button id="female" type="button" class="btn btn-success btn-xs">
-                女性结构</button>
-        </div>
-        -->
     </div>
     <div class="center-context col-sm-6 col-md-6 col-lg-6" style="margin-top: 80px">
         <div style="padding-top: 20px;padding-bottom: 20px">
@@ -117,11 +109,12 @@
     </div>
 </div>
 <script id="paper-template" type="text/x-handlebars-template">
-    {{#each result}}
-    <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}">
+    {{#each paper}}
+    <input type="checkbox" style="display: inline-block">
+    <dt class="search-results-title" data-index="{{paperIndex}}" data-length="{{paperLength}}" style="width: 95%">
         <a href="paper1.html">{{title}}</a>
     </dt>
-    <dd>
+    <dd style="margin-left: 15px">
         <p class="search-results-authors">{{firstauthor}},{{otherauthors}}</p>
         <p>
             <span>{{journalname}}</span>.

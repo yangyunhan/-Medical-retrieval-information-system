@@ -1,4 +1,16 @@
+
 var echarts = require('echarts');
+
+
+
+let histogramLiteratureNum = [150, 200, 310, 110, 150, 260];
+let histogramLiteratureCitation = [140, 80, 150, 120, 180, 230];
+let histogramLiteratureDownload = [145, 340, 260, 90, 120, 240];
+let pieChartValues = [235,274,310,335,400];
+let lineChart1Male = [80,67,105,90,113,122,50,72,64];
+let lineChart1Female = [85,60,80,120,100,90,60,80,55,70];
+let lineChart2Male = [80,67,105,90,113,122,50,72,64];
+let lineChart2Female = [85,60,80,120,100,90,60,80,55,70];
 
 let histogram = echarts.init($('.histogram')[0]);
 let pieChart = echarts.init($('.pieChart')[0]);
@@ -23,7 +35,7 @@ histogram.setOption({
         textStyle:{
             fontSize: 8
         },
-        data: ['系列1','系列2','系列3'],
+        data: ['文章总数','引文数量','下载量'],
     },
     textStyle:{
         fontSize: 14
@@ -42,7 +54,7 @@ histogram.setOption({
         height: '52%'
     },
     xAxis: {
-        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+        data: ['大脑', '肺部', '肝脏', '大肠', '胃', '胆囊'],
         splitNumber: 6,
         axisLine:{
             lineStyle:{
@@ -94,27 +106,27 @@ histogram.setOption({
     },
     series: [
         {
-            name: '系列1',
+            name: '文章总数',
             type: 'bar',
             legendHoverLink: true,
             barWidth: '28%',
             barGap: '-30%',
-            data: [150, 200, 310, 110, 150, 260]
+            data: histogramLiteratureNum
         },
         {
-            name: '系列2',
+            name: '引文数量',
             type: 'bar',
             legendHoverLink: true,
             barWidth: '28%',
             barGap: '-30%',
-            data: [140, 80, 150, 120, 180, 230]
+            data: histogramLiteratureCitation
         },
         {
-            name: '系列3',
+            name: '下载量',
             type: 'bar',
             barWidth: '28%',
             barGap: '-30%',
-            data: [145, 340, 260, 90, 120, 240]
+            data: histogramLiteratureDownload
         }
         ]
 });
@@ -149,7 +161,7 @@ pieChart.setOption({
         textStyle: {
             fontSize: 8
         },
-        data: ['视频广告','联盟广告','邮件营销','直接访问','搜索引擎'],
+        data: ['概念介绍','方法模型','临床试验','理论分析','对比研究'],
     },
     series : [
         {
@@ -158,11 +170,11 @@ pieChart.setOption({
             radius: '50%',
             center: ['32%','65%'],
             data: [
-                {value:235, name:'视频广告'},
-                {value:274, name:'联盟广告'},
-                {value:310, name:'邮件营销'},
-                {value:335, name:'直接访问'},
-                {value:400, name:'搜索引擎'}
+                {value:pieChartValues[0], name:'概念介绍'},
+                {value:pieChartValues[1], name:'方法模型'},
+                {value:pieChartValues[2], name:'临床试验'},
+                {value:pieChartValues[3], name:'理论分析'},
+                {value:pieChartValues[4], name:'对比研究'}
             ],
             label:{
                 formatter: "{b}",
@@ -203,7 +215,7 @@ lineChart1.setOption({
         textStyle: {
             fontSize: 8
         },
-        data: ['系列1','系列2'],
+        data: ['男性','女性'],
 
     },
     tooltip: {
@@ -227,7 +239,7 @@ lineChart1.setOption({
             fontSize: 9
         },
         nameGap: 13,
-        data: ['1','2','3','4','5','6','7','8','9'],
+        data: ['10','11','12','13','14','15','16','17','18'],
         axisLine:{
             lineStyle:{
                 color: '#A69B92',
@@ -272,20 +284,17 @@ lineChart1.setOption({
             margin: 6
         },
         splitNumber: 4
-        //gridIndex: 0,
-        //min:0,
-        //max: 140
     },
     series: [
         {
-            name: '系列1',
-            data: [80,67,105,90,113,122,50,72,64],
+            name: '男性',
+            data: lineChart1Male,
             type: 'line',
             smooth: true,
         },
         {
-            name: '系列2',
-            data: [85,60,80,120,100,90,60,80,55,70],
+            name: '女性',
+            data: lineChart1Female,
             type: 'line',
             smooth: true
         }
@@ -314,7 +323,7 @@ lineChart2.setOption({
         textStyle: {
             fontSize: 8
         },
-        data: ['系列1','系列2'],
+        data: ['男性','女性'],
 
     },
     tooltip: {
@@ -338,7 +347,7 @@ lineChart2.setOption({
             fontSize: 9
         },
         nameGap: 13,
-        data: ['1','2','3','4','5','6','7','8','9'],
+        data: ['10','11','12','13','14','15','16','17','18'],
         axisLine:{
             lineStyle:{
                 color: '#A69B92',
@@ -383,20 +392,17 @@ lineChart2.setOption({
             margin: 6
         },
         splitNumber: 4
-        //gridIndex: 0,
-        //min:0,
-        //max: 140
     },
     series: [
         {
-            name: '系列1',
-            data: [80,67,105,90,113,122,50,72,64],
+            name: '男性',
+            data: lineChart2Male,
             type: 'line',
             smooth: true,
         },
         {
-            name: '系列2',
-            data: [85,60,80,120,100,90,60,80,55,70],
+            name: '女性',
+            data: lineChart2Female,
             type: 'line',
             smooth: true
         }

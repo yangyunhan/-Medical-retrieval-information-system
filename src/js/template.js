@@ -1,6 +1,6 @@
 import ajaxFunc from './results'
-//let data = require('./results');
 let Page = require('./page');
+
 
 let results;
 ajaxFunc(function (data) {
@@ -8,13 +8,14 @@ ajaxFunc(function (data) {
 }, function () {
     console.log('There is something wrong');
 });
+
 module.exports = (function () {
     function Template(paper, scriptId, elementClass) {
         let myTemplate = Handlebars.compile($(scriptId).html());
         $(elementClass).html(myTemplate(paper));
     }
-    let pageLength = Math.ceil(results.length/10);
-    let lastLength = results.length % 10;
+    let pageLength = Math.ceil(results.length/10);//results
+    let lastLength = results.length % 10;//results
     let papers = [];
     let pId = 0;
     for(let i = 0; i < pageLength; i++){
@@ -29,7 +30,7 @@ module.exports = (function () {
             paper: []
         }
     }
-    results.paper.forEach(function (item) {
+    results.paper.forEach(function (item) {//results
         if(papers[pId].paper.length<10){
             papers[pId].paper.push(item);
         }else {
@@ -37,7 +38,7 @@ module.exports = (function () {
             papers[pId].paper.push(item);
         }
     });
-    Template(results,'#paper-number', '.total-number');
+    Template(results,'#paper-number', '.total-number');//results
     Template(papers[0],'#paper-template', '#searchResultsList');
     Page({
         num:pageLength,//页码数
@@ -49,5 +50,5 @@ module.exports = (function () {
     });
 })();
 
-
+module.exports.results = results;
 

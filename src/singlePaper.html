@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医学信息检索</title>
+</head>
+<body>
+    <div style="filter: alpha(opacity=20)">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="images/IRLablogo.png" href="#maim.jsp"style="padding:0;height:50px;">
+                <a class="navbar-brand" href="main.html">&nbsp&nbsp医学检索系统&nbsp&nbsp</a>
+            </div>
+            <div class="collapse navbar-collapse  navbar-right" id="top-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="main.html">&nbsp&nbsp首页&nbsp&nbsp</a></li>
+                    <li><a href="adSearch.html">&nbsp&nbsp高级检索&nbsp&nbsp</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <button type="button" id="login" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>登陆</button>
+                        <button type="button" id="register" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- end of 导航栏 -->
+    <div class="center-block" style="overflow: hidden; padding-top: 110px">
+        <div class="center-left col-sm-2 col-md-2 col-lg-2">
+            <img class="bodyimg" src="images/body.png" ismap="ismap" border="0" usemap="#bodymap" style="min-width: 130% !important;display: inline-block;margin-left: -20%"/>
+            <map name="bodymap" id="bodymap">
+                <area shape="rect" coords="150,65,230,130" href="#lung" alt="肺部" />
+                <area shape="circle" coords="190, 190, 40" href="#bladder" alt="膀胱" />
+            </map>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="row">
+                <div class="col-md-12 title-content">
+                    <div class="title-authors">
+                        <h1 class="artTitle">
+                            Entitymetrics: Measuring the Impact of Entities
+                        </h1>
+                        <ul class="author-list">
+                            <li>ying ding</li>
+                            <li>min song</li>
+                            <li>jia han</li>
+                        </ul>
+                    </div>
+                    <div class="date-doi">
+                        <ul class="doi-list">
+                            <li>published:august 29, 2013</li>
+                            <li>http://doi.org/10.1371/journal.pone.0071416</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="paper-wrapper">
+                <div class="paper">
+                    <div class="function-container">
+                        <div class="container-item">
+                            <h2>Abstract</h2>
+                            <p>This paper proposes entitymetrics to measure the impact of knowledge units.
+                                Entitymetrics highlight the importance of entities embedded in scientific
+                                literature for further knowledge discovery. In this paper, we use Metformin,
+                                a drug for diabetes, as an example to form an entity-entity citation network
+                                based on literature related to Metformin. We then calculate the network
+                                features and compare the centrality ranks of biological entities with results
+                                from Comparative Toxicogenomics Database (CTD). The comparison demonstrates
+                                the usefulness of entitymetrics to detect most of the outstanding interactions
+                                manually curated in CTD.
+                            </p>
+                        </div>
+                        <div class="container-item">
+                            <h2>Introduction</h2>
+                            <p>Currently, knowledge is being amassed rapidly; however, most of it is being
+                                encoded as strings in unstructured scientific literature. Extraction of this
+                                knowledge presently places a huge burden on already overloaded researchers,
+                                as they must manually dig out the embedded knowledge by reading tons of
+                                articles. This knowledge consists of many connected individual knowledge
+                                units encapsulated as entities in scientific papers. These entities could
+                                be authors, references, journals, and keywords that are commonly studied in
+                                scholarly evaluation, or they could be datasets, key methods, genes, drugs,
+                                and diseases that have not yet been widely explored in bibliometrics.
+                                Effective knowledge transfer depends on efficient knowledge accumulation.
+                                If these entities were decoded/annotated using a standard format (e.g.
+                                XML tags or RDF triples) and following shared semantics (e.g., domain
+                                ontologies, or controlled vocabularies), then connecting the entity dots
+                                would be as easy as flipping a switch. A knowledge graph could then be
+                                formed/accumulated automatically based on existing articles, and newly
+                                published articles, to lead potentially to successful knowledge discovery [1].
+                            </p>
+                        </div>
+                        <div class="container-item">
+                            <h2>Methodology</h2>
+                            <p>Metformin (N",N"-dimethylbiguanide) is often referred to as a magic drug.
+                                Originally, the drug was developed to treat Type II diabetes, however now,
+                                it is also being considered to treat and prevent cancer, obesity, depression,
+                                and aging [16]. Endocrinologists, cardiologists, oncologists, and aging
+                                specialists have generated waves of interest by attempting to use
+                                anti-diabetic biguanides to control body weight and tumor growth [48].
+                                Metformin is the only anti-diabetic drug, which can prevent the
+                                cardiovascular complications of diabetes and remains as one, of the only two,
+                                oral anti-diabetics on the World Health Organization Model List of Essential
+                                Medicines [49]. Obesity and cancer have interrelationships with aging [50].
+                                Metformin is able moderately to reduce body weight for obese diabetics because
+                                it can reduce insulin resistance and hyperinsulinemia [51]. A recent study
+                                found that children and adolescents are more responsive to metformin-induced
+                                weight loss compared to adults [52].
+                                Metformin (N",N"-dimethylbiguanide) is often referred to as a magic drug.
+                                Originally, the drug was developed to treat Type II diabetes, however now,
+                                it is also being considered to treat and prevent cancer, obesity, depression,
+                                and aging [16]. Endocrinologists, cardiologists, oncologists, and aging
+                                specialists have generated waves of interest by attempting to use
+                                anti-diabetic biguanides to control body weight and tumor growth [48].
+                                Metformin is the only anti-diabetic drug, which can prevent the
+                                cardiovascular complications of diabetes and remains as one, of the only two,
+                                oral anti-diabetics on the World Health Organization Model List of Essential
+                                Medicines [49]. Obesity and cancer have interrelationships with aging [50].
+                                Metformin is able moderately to reduce body weight for obese diabetics because
+                                it can reduce insulin resistance and hyperinsulinemia [51]. A recent study
+                                found that children and adolescents are more responsive to metformin-induced
+                                weight loss compared to adults [52].
+                            </p>
+                        </div>
+                        <div class="container-item">
+                            <h2>Results and Discussion</h2>
+                            <p>In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                                In total, the entity-entity citation network based on Metformin information
+                                contains 7,055 entities and 264,345 links, among which 1,561 are loops
+                                (i.e. self-citations).
+                            </p>
+                        </div>
+                        <div class="container-item">
+                            <h2>Conclusion</h2>
+                            <p>This paper proposes entitymetrics to measure the impact of knowledge units
+                                at different levels. It highlights the importance of entities embedded in
+                                scientific literature for further knowledge discovery. Compared with the
+                                related work, entitymetrics advances the state of the art by taking knowledge
+                                entity as the research unit to move bibliometrics to discovery knowledge.
+                                It refines Swanson's method by utilizing B terms as knowledge entities.
+                                This paper uses Metformin as an example to form an entity-entity citation
+                                network based on literatures related to Metformin and calculates the network
+                                features of this network. It compares the centrality ranks of the network
+                                with results from the CTD. Entitymetric results, identifying the interaction
+                                of Metformin with diseases, drugs, and genes, were consistent with the CTD
+                                thereby demonstrating the usefulness of the entity level bibliometric approach
+                                to detect most of the outstanding interactions manually curated in the CTD.
+                                This paper proposes entitymetrics to measure the impact of knowledge units
+                                at different levels. It highlights the importance of entities embedded in
+                                scientific literature for further knowledge discovery. Compared with the
+                                related work, entitymetrics advances the state of the art by taking knowledge
+                                entity as the research unit to move bibliometrics to discovery knowledge.
+                                It refines Swanson's method by utilizing B terms as knowledge entities.
+                                This paper uses Metformin as an example to form an entity-entity citation
+                                network based on literatures related to Metformin and calculates the network
+                                features of this network. It compares the centrality ranks of the network
+                                with results from the CTD. Entitymetric results, identifying the interaction
+                                of Metformin with diseases, drugs, and genes, were consistent with the CTD
+                                thereby demonstrating the usefulness of the entity level bibliometric approach
+                                to detect most of the outstanding interactions manually curated in the CTD.
+                                This paper proposes entitymetrics to measure the impact of knowledge units
+                                at different levels. It highlights the importance of entities embedded in
+                                scientific literature for further knowledge discovery. Compared with the
+                                related work, entitymetrics advances the state of the art by taking knowledge
+                                entity as the research unit to move bibliometrics to discovery knowledge.
+                                It refines Swanson's method by utilizing B terms as knowledge entities.
+                                This paper uses Metformin as an example to form an entity-entity citation
+                                network based on literatures related to Metformin and calculates the network
+                                features of this network. It compares the centrality ranks of the network
+                                with results from the CTD. Entitymetric results, identifying the interaction
+                                of Metformin with diseases, drugs, and genes, were consistent with the CTD
+                                thereby demonstrating the usefulness of the entity level bibliometric approach
+                                to detect most of the outstanding interactions manually curated in the CTD.
+                                This paper proposes entitymetrics to measure the impact of knowledge units
+                                at different levels. It highlights the importance of entities embedded in
+                                scientific literature for further knowledge discovery. Compared with the
+                                related work, entitymetrics advances the state of the art by taking knowledge
+                                entity as the research unit to move bibliometrics to discovery knowledge.
+                                It refines Swanson's method by utilizing B terms as knowledge entities.
+                                This paper uses Metformin as an example to form an entity-entity citation
+                                network based on literatures related to Metformin and calculates the network
+                                features of this network. It compares the centrality ranks of the network
+                                with results from the CTD. Entitymetric results, identifying the interaction
+                                of Metformin with diseases, drugs, and genes, were consistent with the CTD
+                                thereby demonstrating the usefulness of the entity level bibliometric approach
+                                to detect most of the outstanding interactions manually curated in the CTD.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <ul class="function-list">
+                <li class="function-item function-active">Abstract</li>
+                <li class="function-item">Introduction</li>
+                <li class="function-item">Methodology</li>
+                <li class="function-item">Results and Discussion</li>
+                <li class="function-item">Conclusion</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-sm-6 col-lg-6">
+                        <h4>
+                            武汉大学信息管理学院IR-Lab</h4>
+                        <p>
+                            <span class="glyphicon glyphicon-map-marker"></span>湖北省武汉市武昌区</p>
+                    </div>
+                    <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+                        <div class="row about">
+                            <div class="col-xs-3">
+                                <h4>
+                                    机构简介</h4>
+                                <ul class="list-unstyled">
+                                    <li><a style='color: #333' href="#"><span class="glyphicon glyphicon-link"></span>&nbsp关于我们</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-9">
+                                <h4>
+                                    联系方式</h4>
+                                <ul class="list-unstyled">
+                                    <li><span class="glyphicon glyphicon-envelope">&nbsp电子邮件:xxxxxx@126.com</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row footer-bottom">
+                    <ul class="list-inline text-center">
+                        <li>Copyright &copy;2017. 武汉大学信息管理学院信息检索与知识挖掘研究所 All Rights Reserved.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>医学信息检索</title>
-<link href="css/searchResult-style.css" rel="stylesheet"><link href="css/adSearch-style.css" rel="stylesheet"><link href="css/main-style.css" rel="stylesheet"></head>
+<link href="css/searchResult-style.css" rel="stylesheet"><link href="css/adSearch-style.css" rel="stylesheet"><link href="css/singlePaper-style.css" rel="stylesheet"><link href="css/main-style.css" rel="stylesheet"><link href="css/login-style.css" rel="stylesheet"></head>
 <body>
 <div style="filter:alpha(opacity=20)">
     
@@ -35,10 +35,10 @@
     </nav>
     
 </div>
-<div class="container mainDiv">
+<div class="container mainDiv" style="min-height: 82%">
 <div class="box">
     <div style="padding-top: 90px" class="col-md-4">
-        <div id="testDiv" style="height:300px;width:170px">
+        <div id="testDiv" style="height:396px;width:224.4px">
             <img id="body" class="bodyimg" src="images/全身.png" border="0">
             <img id="brain" style="display:none;" class="bodyimg" src="images/大脑.png" border="0">
             <img id="digest" style="display:none;" class="bodyimg" src="images/消化道.png" border="0">
@@ -54,23 +54,23 @@
         </div>
     </div>
     <div class="col-md-8">
-            <div style="padding:90px 0px 30px 10px;text-align:left;font-size: 55px; font-family:STLiti;font-weight:bold;">Anatomy Human Retrival</div>
-            <div style="padding:10px 0px 10px;">
+            <div style="padding:90px 0 30px 10px;text-align:left;font-size: 60px; font-family:STLiti;font-weight:bold;">Anatomy Human Retrival</div>
+            <div style="padding:10px 0 10px;">
                 <form class="form-inline" role="form">
-                    <div class="form-group col-md-10">
+                    <div class="form-group col-md-10" style="height: 30px">
                         <div class="input-group input-group-md col-md-12">
-                            <input type="text" id="ipSearch" class="form-control" placeholder="请输入想要搜索的信息">
+                            <input type="text" id="ipSearch" class="form-control" placeholder="请输入想要搜索的信息" style="font-size: 18px;height: 42px">
                             <span class="input-group-btn" style="width:46px">
-                                 <button id="btSearch" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+                                 <button id="btSearch" type="button" class="btn btn-primary" style="height: 42px"><span class="glyphicon glyphicon-search"></span></button>
                             </span>
                         </div>
                     </div>
                     <div class="form-group col-md-2">
-                        <button id="adSearch" type="button" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-refresh">Advanced</span></button>
+                        <button id="adSearch" type="button" class="btn btn-primary btn-md" style="height: 42px"><span class="glyphicon glyphicon-refresh">Advanced</span></button>
                     </div>
                 </form>
             </div>
-            <div class="hot-search">
+            <div class="hot-search" style="font-size: 18px">
                 <span style="font-weight:bold">热门搜索：</span>
                 <a class="hot-search-items" href="#heart">heart</a>
                 <a class="hot-search-items" href="#lung">lung</a>
@@ -80,7 +80,59 @@
             </div>
     </div>
 </div>
-    
+
+</div>
+<div class="pictures">
+    <div>
+        <div style="background-color: #F2F2F2; overflow: hidden">
+            <p style="color: white; background-color: #148AFF; margin-top: 20px;margin-bottom: 0; width: 65%;padding: 10px; font-size: 20px">整体维度</p>
+        </div>
+        <div>
+
+            <div class="globalDimension1"></div>
+            <div class="line"></div>
+            <div class="globalDimension2">
+                <div class="globalDimension2-1"></div>
+                <div class="globalDimension2-2"></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="background-color: #F2F2F2; overflow: hidden">
+            <p style="float: right; color: white; background-color: #148AFF; margin-top: 20px;margin-bottom: 0; width: 65%;padding: 10px; font-size: 20px">器官维度</p>
+        </div>
+        <div>
+            <div class="apparatusDimension"><img src="images/心脏器官.png"></div>
+        </div>
+        <div style="position: relative">
+            <div class="absoluteFre"></div>
+            <div class="relativeFre"></div>
+        </div>
+    </div>
+    <div style="position: relative; margin-bottom: 80px">
+        <div style="background-color: #F2F2F2; overflow: hidden">
+            <p style="color: white; background-color: #148AFF; margin-top: 20px;margin-bottom: 0; width: 65%;padding: 10px; font-size: 20px">系统维度</p>
+        </div>
+        <div style="margin-top: 50px;position: relative">
+            <div class="jgPic"></div>
+            <div class="hxPic"></div>
+        </div>
+
+        <div style="position: relative; margin-bottom: 20px; margin-top: 80px">
+            <div class="xhPic"></div>
+            <div class="xxgPic"></div>
+        </div>
+
+        <div style="position: absolute; width: 900px; top: 135px; left: 410px;">
+            <div class="female1"></div>
+            <div class="female2"></div>
+            <div class="female3"></div>
+            <div class="female4"></div>
+            <div class="female5"></div>
+            <div class="radarPic"></div>
+        </div>
+
+    </div>
 </div>
 <div class="footer">
     <div class="container">
@@ -121,5 +173,5 @@
 </div>
 
 
-<script type="text/javascript" src="js/searchResult.af141b.js"></script><script type="text/javascript" src="js/adSearch.af141b.js"></script><script type="text/javascript" src="js/main.af141b.js"></script></body>
+<script type="text/javascript" src="js/searchResult.cf87a1.js"></script><script type="text/javascript" src="js/adSearch.cf87a1.js"></script><script type="text/javascript" src="js/singlePaper.cf87a1.js"></script><script type="text/javascript" src="js/main.cf87a1.js"></script><script type="text/javascript" src="js/login.cf87a1.js"></script></body>
 </html>

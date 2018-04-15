@@ -70,16 +70,16 @@ $("#plus").click(function () {
         }
     });
 
-/*$('.date').datetimepicker({
-        language: 'zh-CN', //显示中文
-        format: "yyyy-mm-dd",
-        locale: moLo.locale('zh-cn'),
-        minView: 2,
-        initialDate: new Date(),
-        autoclose: true, //选中自动关闭
-        todayBtn: true, //显示今日按钮
-        todayHighlight: true
-    });*/
+$('.date').datetimepicker({
+    language: 'zh-CN', //显示中文
+    format: "yyyy-mm-dd",
+    /*locale: moLo.locale('zh-cn'),*/
+    minView: 2,
+    initialDate: new Date(),
+    autoclose: true, //选中自动关闭
+    todayBtn: true, //显示今日按钮
+    todayHighlight: true
+});
 $('#back').click(function(){
         window.location.href = 'main.html'
     });

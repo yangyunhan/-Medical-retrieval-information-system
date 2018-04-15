@@ -11,7 +11,6 @@ function GetQueryString() {
         }
         data[keyValue[0]] = keyValue[1];
     });
-
     //console.log(data);
 }
 
@@ -28,7 +27,7 @@ module.exports = function ajaxFunc(callback1, callback2) {
         cache:false,
         async:false,
         success:function (result){
-            callback1($.parseJSON(result));
+            callback1(result);
         },
         error:function () {
             callback2();

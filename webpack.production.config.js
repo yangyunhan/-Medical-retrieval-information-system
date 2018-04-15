@@ -11,7 +11,9 @@ let config = {
     entry: {
         main: __dirname + "/src/js/main.js",
         adSearch: __dirname + "/src/js/adSearch.js",
-        searchResult: __dirname + "/src/js/searchResult.js"
+        searchResult: __dirname + "/src/js/searchResult.js",
+        login: __dirname + "/src/js/login.js",
+        singlePaper: __dirname + "/src/js/singlePaper.js"
     },
     output: {
         path: path.join(__dirname, "/dist"), //打包后的文件存放的地方
@@ -98,7 +100,9 @@ let pages = Object.keys(getEntry('./src/*.html'));
 let confTitle = [
     {name: 'main', title: '这是首页'},
     {name: 'adSearch', title: '这是检索页'},
-    {name: 'searchResult', title: '这是检索结果页'}
+    {name: 'searchResult', title: '这是检索结果页'},
+    {name: 'login', title: '这是登陆页'},
+    {name: 'singlePaper', title: '这是文章页'}
 ];
 //生成HTML模板
 pages.forEach(function(pathname) {
